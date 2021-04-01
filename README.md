@@ -9,10 +9,6 @@ My personal website.
 ## URLs
 * Live: [miketarpey.com](https://miketarpey.com)
 
-## Special Thanks
-* The latest iteration of the site was inspired by [https://jodie.lekoarts.de](https://jodie.lekoarts.de) (thanks!)
-  * [View license](#third-party-licenses)
-
 ## Key Packages
 * [Styled Components](https://styled-components.com) for CSS-in-JS
 * [Prettier](https://prettier.io) for easy code formatting
