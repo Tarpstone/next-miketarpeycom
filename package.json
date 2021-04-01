@@ -1,0 +1,36 @@
+{
+  "name": "next-miketarpeycom",
+  "version": "latest",
+  "description": "https://miketarpey.com",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "lint": "eslint .  --ext \"**/*.{js,jsx,ts,tsx}\"",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+  },
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.12.0",
+    "next": "^10.0.8",
+    "numeral": "^2.0.6",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-is": "^17.0.1",
+    "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.31",
+    "@types/react": "^17.0.2",
+    "typescript": "^4.2.2",
+    "@babel/eslint-parser": "^7.13.14",
+    "eslint": "^7.20.0",
+    "eslint-plugin-react": "^7.22.0",
+    "prettier": "2.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AnnuityDew/next-miketarpeycom"
+  },
+  "license": "MIT"
+}
