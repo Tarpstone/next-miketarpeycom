@@ -1,13 +1,5 @@
-
-
 const Footer = () => {
-
-
-  return (
-    <footer>
-      Nothing here yet!
-    </footer>
-  )
+  return <footer>Nothing here yet!</footer>
 }
 
 export default Footer
