@@ -8,19 +8,15 @@ My personal website.
 
 ## URLs
 * Live: [miketarpey.com](https://miketarpey.com)
-
-## Special Thanks
-* The latest iteration of the site was inspired by [https://jodie.lekoarts.de](https://jodie.lekoarts.de) (thanks!)
-  * [View license](#third-party-licenses)
+* Preview: [go here!](https://next-miketarpeycom-git-dev-annuitydew.vercel.app/) (unless I broke something)
 
 ## Key Packages
 * [Styled Components](https://styled-components.com) for CSS-in-JS
 * [Prettier](https://prettier.io) for easy code formatting
-* [React Helmet](https://github.com/nfl/react-helmet) for SEO
 
 ## Technology Stack
-* Hosted with [Firebase Hosting](https://firebase.google.com/docs/hosting)
-* [React](https://reactjs.org) with [Gatsby](https://www.gatsbyjs.com)
+* Hosted on [Vercel](https://vercel.com)
+* [React](https://reactjs.org) with [Next.js](https://nextjs.org)
 * TypeScript / JavaScript
 
 ## References
