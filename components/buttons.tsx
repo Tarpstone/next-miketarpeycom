@@ -53,7 +53,7 @@ export const InternalButton = ({ label, url, kind, width }: ButtonProps) => (
   </div>
 )
 
-export const OutboundButton = ({ label, url, kind, width }: ButtonProps) => (
+export const ExternalButton = ({ label, url, kind, width }: ButtonProps) => (
   /* outer div allows us to pad and align */
   <div>
     <a href={url}>
