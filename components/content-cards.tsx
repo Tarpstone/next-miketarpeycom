@@ -117,7 +117,12 @@ export const MeCard = ({ imagesrc, imagealt }: CardProps) => {
     <MeGlassDiv>
       <ContactDiv>
         <MePicDiv>
-          <Image src={imagesrc} alt={imagealt} layout="fill" objectFit="cover" />
+          <Image
+            src={imagesrc}
+            alt={imagealt}
+            layout="fill"
+            objectFit="cover"
+          />
         </MePicDiv>
         <MarginList>
           <li>

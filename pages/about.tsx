@@ -11,6 +11,7 @@ export default function Home() {
       description="Mike Tarpey's resume and project history."
       url="https://miketarpey.com/about"
       h1text="about"
+      currentPage="about"
     >
       <AboutCardGrid>
         <MeCard

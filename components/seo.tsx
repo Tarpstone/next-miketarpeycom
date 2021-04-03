@@ -9,13 +9,18 @@ interface HelmetProps {
 }
 
 const SEO = ({ titleTwo, description, url, urlImage }: HelmetProps) => {
-  {/* defaults */}
+  {
+    /* defaults */
+  }
   const siteUrl = "https://miketarpey.com"
-  const siteDescription = "Mike Tarpey, a pretty ordinary citizen of planet Earth. Credentialed actuary, aspiring programmer, casual Twitch streamer, UConn alum."
+  const siteDescription =
+    "Mike Tarpey, a pretty ordinary citizen of planet Earth. Credentialed actuary, aspiring programmer, casual Twitch streamer, UConn alum."
   const siteLanguage = "en-US"
   const siteImage = "/mike-tarpey-childhood-beach-og.jpg"
 
-  {/* choose defaults if no page-specific value provided */}
+  {
+    /* choose defaults if no page-specific value provided */
+  }
   const pageTitle = `mike tarpey${titleTwo}`
   const pageDescription = description || siteDescription
   const pageUrl = url || siteUrl

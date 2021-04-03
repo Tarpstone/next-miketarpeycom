@@ -6,7 +6,7 @@ import { InternalButton, ExternalButton } from "../components/buttons"
 
 export default function Home() {
   return (
-    <NewLayout h1text="mike tarpey">
+    <NewLayout h1text="mike tarpey" currentPage="home">
       <IndexCardGrid>
         <NavCard
           internal={true}
@@ -14,12 +14,7 @@ export default function Home() {
           imagesrc="/images/raw/mike-tarpey-at-pax.jpg"
           imagealt="Mike Tarpey on his way to PAX East 2020 in Boston, Massachusetts."
         >
-          <ul>
-            <li>-aspiring software engineer</li>
-            <li>-credentialed actuary</li>
-            <li>-casual Twitch streamer</li>
-            <li>-UConn alum.</li>
-          </ul>
+          <p>Career and project history.</p>
           <InternalButton
             label="full resume + projects"
             url="/about"
