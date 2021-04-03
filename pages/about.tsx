@@ -21,8 +21,7 @@ export default function Home() {
           imagesrc="/images/raw/mike-tarpey-headshot-20200427.jpg"
           imagealt="Recent headshot of Mike Tarpey."
         />
-        <FlexProjectsSection>
-          <h2>projects</h2>
+        <FlexProjectsSection Sectionh2="projects">
           <ProjectCard
             internal={true}
             label="autobracket"

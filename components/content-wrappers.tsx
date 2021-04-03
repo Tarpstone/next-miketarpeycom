@@ -3,13 +3,14 @@ import styled from "styled-components"
 import { gridBreakpoints } from "../utils/breakpoints"
 
 interface ContentWrapperProps {
+  Sectionh2?: string
   className?: string
   children: React.ReactNode
   wrapperGridColumns?: Array<string>
 }
 
 const GriddedIndexSection = styled.section`
-  padding: 0;
+  padding: 0 25px 0 0;
   display: grid;
   grid-gap: 25px;
   grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
@@ -20,9 +21,9 @@ export const IndexCardGrid = ({ children }: ContentWrapperProps) => (
 )
 
 const GriddedAboutSection = styled.section`
-  padding: 0;
+  padding: 0 0 0 0;
   display: grid;
-  grid-gap: 0px;
+  grid-gap: 25px;
   ${gridBreakpoints("grid-template-columns", [
     { 0: "1fr" },
     { 800: "400px 1fr" },
@@ -33,10 +34,32 @@ export const AboutCardGrid = ({ children }: ContentWrapperProps) => (
   <GriddedAboutSection>{children}</GriddedAboutSection>
 )
 
+const Styledh2 = styled.h2`
+  width: 100%;
+  background: ${props => props.theme.glass.projects};
+  &:hover {
+    background: ${props => props.theme.glass.projectsHover};
+  }
+  transition: 0.3s;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  margin: 0 25px 25px 0;
+  padding: 10px 20px;
+`
+
 const UnstyledProjectsSection = ({
+  Sectionh2,
   className,
   children,
-}: ContentWrapperProps) => <section className={className}>{children}</section>
+}: ContentWrapperProps) => (
+  <section className={className}>
+    <Styledh2>{Sectionh2}</Styledh2>
+    {children}
+  </section>
+)
 
 export const FlexProjectsSection = styled(UnstyledProjectsSection)`
   padding: 0;

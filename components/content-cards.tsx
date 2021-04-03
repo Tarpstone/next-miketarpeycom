@@ -19,15 +19,15 @@ const IndexGlassDiv = styled.section`
   grid-template-rows: ${props => props.gridTemplateRows || "3fr 1fr 2fr 1fr"};
   align-items: stretch;
   min-height: ${props => props.minHeight};
-  background: rgba(255, 255, 255, 0.25);
+  background: ${props => props.theme.glass.basic};
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid ${props => props.theme.glass.basicBorder};
   transition: 0.3s;
   &:hover {
-    background: rgba(255, 255, 255, 0.35);
+    background: ${props => props.theme.glass.basicHover};
   }
 `
 
@@ -81,17 +81,24 @@ export const NavCard = ({
 
 const MeGlassDiv = styled.section`
   place-self: start;
+  ${breakpoints("margin", "", [{ 0: "0 25px 0 0" }, { 800: "0" }])}
   padding: 20px;
   min-height: ${props => props.minHeight || "40vh"};
-  background: rgba(255, 255, 255, 0.25);
+  background: ${props => props.theme.glass.basic};
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid ${props => props.theme.glass.basicBorder};
   transition: 0.3s;
+  & > * {
+    margin: 0 0 10px 0;
+  }
+  & > *:last-child {
+    margin: 0 0 0 0;
+  }
   &:hover {
-    background: rgba(255, 255, 255, 0.35);
+    background: ${props => props.theme.glass.basicHover};
   }
 `
 
@@ -156,26 +163,32 @@ export const MeCard = ({ imagesrc, imagealt }: CardProps) => {
   )
 }
 
+// https://stackoverflow.com/questions/6507014/how-to-space-the-children-of-a-div-with-css
 const ProjectGlassDiv = styled.section`
   padding: 20px;
+  ${breakpoints("margin", "", [
+    { 0: "0 25px 25px 0" },
+    { 800: "0 25px 25px 0" },
+  ])}
   flex-grow: 1;
-  ${breakpoints("margin", "", [{ 0: "25px 0 0 0" }, { 800: "0 0 25px 25px" }])}
-  margin:;
   display: flex;
   flex-direction: column;
   height: auto;
-  grid-gap: 10px;
-  grid-template-rows: ${props => props.gridTemplateRows || "3fr 1fr 2fr 1fr"};
-  align-items: stretch;
-  background: rgba(255, 255, 255, 0.25);
+  background: ${props => props.theme.glass.projects};
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid ${props => props.theme.glass.projectsBorder};
   transition: 0.3s;
+  & > * {
+    margin: 0 0 10px 0;
+  }
+  & > *:last-child {
+    margin: 0 0 0 0;
+  }
   &:hover {
-    background: rgba(255, 255, 255, 0.35);
+    background: ${props => props.theme.glass.projectsHover};
   }
 `
 

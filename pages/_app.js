@@ -12,6 +12,14 @@ const theme = {
     highlight:
       "conic-gradient(at 0% 100%, #b78cf7, #ff7c94, #ffcf0d, #ff7c94, #b78cf7)",
   },
+  glass: {
+    basic: "rgba(255, 255, 255, 0.25)",
+    basicHover: "rgba(255, 255, 255, 0.35)",
+    basicBorder: "rgba(255, 255, 255, 0.18)",
+    projects: "rgba(255, 124, 148, 0.25)",
+    projectsHover: "rgba(255, 124, 148, 0.35)",
+    projectsBorder: "rgba(255, 124, 148, 0.18)",
+  },
 }
 
 // https://github.com/vercel/next.js/tree/canary/examples/with-google-analytics
