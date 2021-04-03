@@ -2,7 +2,7 @@ import React from "react"
 import NewLayout from "../components/layout"
 import { NavCard } from "../components/content-cards"
 import { IndexCardGrid } from "../components/content-wrappers"
-import { InternalButton, OutboundButton } from "../components/buttons"
+import { InternalButton, ExternalButton } from "../components/buttons"
 
 export default function Home() {
   return (
@@ -65,7 +65,7 @@ export default function Home() {
             My app sandbox. Game backlog, March Madness, stats for Mildred
             League, and more...
           </p>
-          <OutboundButton
+          <ExternalButton
             label="visit tarpey.dev"
             url="https://tarpey.dev"
             kind="light"
@@ -79,7 +79,7 @@ export default function Home() {
           imagealt="A cat standing on Mike Tarpey's laptop keyboard."
         >
           <p>Ideas and solutions from my day-to-day.</p>
-          <OutboundButton
+          <ExternalButton
             label="visit medium.com"
             url="https://miketarpey.medium.com/"
             kind="light"

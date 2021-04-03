@@ -1,6 +1,7 @@
 import React from "react"
 import Image from "next/image"
 import styled from "styled-components"
+import { breakpoints } from "../utils/breakpoints"
 
 interface CardProps {
   internal?: boolean
@@ -18,7 +19,6 @@ const IndexGlassDiv = styled.section`
   grid-template-rows: ${props => props.gridTemplateRows || "3fr 1fr 2fr 1fr"};
   align-items: stretch;
   min-height: ${props => props.minHeight};
-  height: 60vh;
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(10px);
@@ -38,8 +38,7 @@ how-can-i-fill-a-div-with-an-image-while-keeping-it-proportional
 
 const CoverPicDiv = styled.div`
   position: relative;
-  width: 100%;
-  height: 100%;
+  height: 200px;
   justify-content: center;
   align-items: center;
   overflow: hidden;
@@ -58,37 +57,25 @@ const Cardh2 = styled.h2`
 `
 
 export const NavCard = ({
-  internal,
   label,
   children,
   imagesrc,
   imagealt,
   gridrowcss,
 }: CardProps) => {
-  if (internal === true) {
-    return (
-      <IndexGlassDiv minHeight="400px" gridTemplateRows={gridrowcss}>
-        <CoverPicDiv>
-          <CoverNextImage src={imagesrc} alt={imagealt} layout="fill" objectFit="cover" />
-        </CoverPicDiv>
-        <Cardh2>{label}</Cardh2>
-        {children}
-      </IndexGlassDiv>
-    )
-  } else {
-    return (
-      <IndexGlassDiv minHeight="400px" gridTemplateRows={gridrowcss}>
-        <CoverPicDiv>
-          <CoverNextImage src={imagesrc} alt={imagealt} layout="fill" objectFit="cover" />
-        </CoverPicDiv>
-        <Cardh2>{label}</Cardh2>
-        {children}
-      </IndexGlassDiv>
-    )
-  }
+  return (
+    <IndexGlassDiv minHeight="400px" gridTemplateRows={gridrowcss}>
+      <CoverPicDiv>
+        <CoverNextImage src={imagesrc} alt={imagealt} layout="fill" objectFit="cover" />
+      </CoverPicDiv>
+      <Cardh2>{label}</Cardh2>
+      {children}
+    </IndexGlassDiv>
+  )
 }
 
 const MeGlassDiv = styled.section`
+  place-self: start;
   padding: 20px;
   min-height: ${props => props.minHeight || "40vh"};
   background: rgba(255, 255, 255, 0.25);
@@ -156,5 +143,49 @@ export const MeCard = ({ imagesrc, imagealt }: CardProps) => {
         pursuing a graduate degree starting in the fall of 2021.
       </p>
     </MeGlassDiv>
+  )
+}
+
+const ProjectGlassDiv = styled.section`
+  padding: 20px;
+  flex-grow: 1;
+  ${breakpoints("margin", "", [
+    { 0: "25px 0 0 0" },
+    { 800: "0 0 25px 25px" },
+  ])}
+  margin: ;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  grid-gap: 10px;
+  grid-template-rows: ${props => props.gridTemplateRows || "3fr 1fr 2fr 1fr"};
+  align-items: stretch;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: 0.3s;
+  &:hover {
+    background: rgba(255, 255, 255, 0.35);
+  }
+`
+
+export const ProjectCard = ({
+  label,
+  children,
+  imagesrc,
+  imagealt,
+  gridrowcss,
+}: CardProps) => {
+  return (
+    <ProjectGlassDiv minHeight="400px" gridTemplateRows={gridrowcss}>
+      <CoverPicDiv>
+        <CoverNextImage src={imagesrc} alt={imagealt} layout="fill" objectFit="cover" />
+      </CoverPicDiv>
+      <Cardh2>{label}</Cardh2>
+      {children}
+    </ProjectGlassDiv>
   )
 }

@@ -2,7 +2,7 @@ import React from "react"
 import NewLayout from "../components/layout"
 import { NavCard } from "../components/content-cards"
 import { IndexCardGrid } from "../components/content-wrappers"
-import { OutboundButton } from "../components/buttons"
+import { ExternalButton } from "../components/buttons"
 
 export default function Home() {
   return (
@@ -24,7 +24,7 @@ export default function Home() {
             He makes art to challenge perspectives and give hope to the
             marginalized and oppressed.
           </h5>
-          <OutboundButton
+          <ExternalButton
             label="visit trevorwentt.com"
             url="https://trevorwentt.com/"
             kind="light"
@@ -39,7 +39,7 @@ export default function Home() {
           gridrowcss="5fr 1fr 2fr 1fr"
         >
           <h5>Bad memes and nonstop emotes...we have fun here.</h5>
-          <OutboundButton
+          <ExternalButton
             label="join the discord"
             url="https://discord.com/invite/bVDZfNe"
             kind="light"
