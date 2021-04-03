@@ -69,7 +69,12 @@ export const NavCard = ({
     return (
       <IndexGlassDiv minHeight="400px" gridTemplateRows={gridrowcss}>
         <CoverPicDiv>
-          <CoverNextImage src={imagesrc} alt={imagealt} layout="fill" objectFit="cover" />
+          <CoverNextImage
+            src={imagesrc}
+            alt={imagealt}
+            layout="fill"
+            objectFit="cover"
+          />
         </CoverPicDiv>
         <Cardh2>{label}</Cardh2>
         {children}
@@ -79,7 +84,12 @@ export const NavCard = ({
     return (
       <IndexGlassDiv minHeight="400px" gridTemplateRows={gridrowcss}>
         <CoverPicDiv>
-          <CoverNextImage src={imagesrc} alt={imagealt} layout="fill" objectFit="cover" />
+          <CoverNextImage
+            src={imagesrc}
+            alt={imagealt}
+            layout="fill"
+            objectFit="cover"
+          />
         </CoverPicDiv>
         <Cardh2>{label}</Cardh2>
         {children}
@@ -130,7 +140,12 @@ export const MeCard = ({ imagesrc, imagealt }: CardProps) => {
     <MeGlassDiv>
       <ContactDiv>
         <MePicDiv>
-          <Image src={imagesrc} alt={imagealt} layout="fill" objectFit="cover" />
+          <Image
+            src={imagesrc}
+            alt={imagealt}
+            layout="fill"
+            objectFit="cover"
+          />
         </MePicDiv>
         <MarginList>
           <li>

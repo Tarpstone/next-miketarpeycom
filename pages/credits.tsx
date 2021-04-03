@@ -8,6 +8,7 @@ export default function Page() {
       description="The tech that currently makes this site possible."
       url="https://miketarpey.com/credits"
       h1text="credits"
+      currentPage="credits"
     >
       <h2>Under construction!</h2>
     </NewLayout>

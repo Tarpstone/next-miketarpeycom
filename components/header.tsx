@@ -1,10 +1,11 @@
 import React from "react"
 import styled from "styled-components"
 import Navigation from "./navigation"
-import { gridBreakpoints } from "../utils/breakpoints"
+import { breakpoints, gridBreakpoints } from "../utils/breakpoints"
 
 interface HeaderProps {
   h1text: string
+  currentPage: string
 }
 
 const StyledHeaderDiv = styled.div`
@@ -17,27 +18,19 @@ const StyledHeaderDiv = styled.div`
 `
 
 const GradientText = styled.h1`
-  background: conic-gradient(
-    from 225deg at -100px -100px,
-    #20b2aa,
-    #135da5,
-    #0d0895,
-    #4b0082,
-    #4b0082,
-    #0d0895,
-    #135da5,
-    #20b2aa
-  );
+  background: ${props => props.theme.gradients.main};
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  ${breakpoints("padding", "", [{ 0: "10px 25px 5px 25px" }, { 800: "20px 25px" }])}
+  ${breakpoints("justify-self", "", [{ 0: "center" }, { 800: "left" }])}
 `
 
-const NewHeader = ({ h1text }: HeaderProps) => {
+const NewHeader = ({ h1text, currentPage }: HeaderProps) => {
   return (
     <header>
       <StyledHeaderDiv>
         <GradientText>{h1text}</GradientText>
-        <Navigation />
+        <Navigation currentPage={currentPage} />
       </StyledHeaderDiv>
     </header>
   )
