@@ -33,9 +33,10 @@ export const AboutCardGrid = ({ children }: ContentWrapperProps) => (
   <GriddedAboutSection>{children}</GriddedAboutSection>
 )
 
-const UnstyledProjectsSection = ({ className, children }: ContentWrapperProps) => (
-  <section className={className}>{children}</section>
-)
+const UnstyledProjectsSection = ({
+  className,
+  children,
+}: ContentWrapperProps) => <section className={className}>{children}</section>
 
 export const FlexProjectsSection = styled(UnstyledProjectsSection)`
   padding: 0;

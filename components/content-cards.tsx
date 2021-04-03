@@ -66,7 +66,12 @@ export const NavCard = ({
   return (
     <IndexGlassDiv minHeight="400px" gridTemplateRows={gridrowcss}>
       <CoverPicDiv>
-        <CoverNextImage src={imagesrc} alt={imagealt} layout="fill" objectFit="cover" />
+        <CoverNextImage
+          src={imagesrc}
+          alt={imagealt}
+          layout="fill"
+          objectFit="cover"
+        />
       </CoverPicDiv>
       <Cardh2>{label}</Cardh2>
       {children}
@@ -154,11 +159,8 @@ export const MeCard = ({ imagesrc, imagealt }: CardProps) => {
 const ProjectGlassDiv = styled.section`
   padding: 20px;
   flex-grow: 1;
-  ${breakpoints("margin", "", [
-    { 0: "25px 0 0 0" },
-    { 800: "0 0 25px 25px" },
-  ])}
-  margin: ;
+  ${breakpoints("margin", "", [{ 0: "25px 0 0 0" }, { 800: "0 0 25px 25px" }])}
+  margin:;
   display: flex;
   flex-direction: column;
   height: auto;
@@ -187,7 +189,12 @@ export const ProjectCard = ({
   return (
     <ProjectGlassDiv minHeight="400px" gridTemplateRows={gridrowcss}>
       <CoverPicDiv>
-        <CoverNextImage src={imagesrc} alt={imagealt} layout="fill" objectFit="cover" />
+        <CoverNextImage
+          src={imagesrc}
+          alt={imagealt}
+          layout="fill"
+          objectFit="cover"
+        />
       </CoverPicDiv>
       <Cardh2>{label}</Cardh2>
       {children}

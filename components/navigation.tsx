@@ -4,7 +4,10 @@ import styled from "styled-components"
 import { breakpoints } from "../utils/breakpoints"
 
 const StyledListLink = styled.a`
-  background: ${props => props.active ? props.theme.gradients.highlight : props.theme.gradients.main};
+  background: ${props =>
+    props.active
+      ? props.theme.gradients.highlight
+      : props.theme.gradients.main};
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 `
@@ -69,7 +72,9 @@ const Navigation = ({ currentPage }) => {
         <DesktopNavList>
           {navMetadata.map(navItem => (
             <DesktopNavItem key={navItem.slug}>
-              <ListLink to={navItem.slug} active={(navItem.name === currentPage)}>{navItem.name}</ListLink>
+              <ListLink to={navItem.slug} active={navItem.name === currentPage}>
+                {navItem.name}
+              </ListLink>
             </DesktopNavItem>
           ))}
         </DesktopNavList>
@@ -78,7 +83,7 @@ const Navigation = ({ currentPage }) => {
         <MobileNavList>
           {navMetadata.map(navItem => (
             <MobileNavItem key={navItem.slug}>
-              <ListLink to={navItem.slug} active={(navItem.name === currentPage)}>
+              <ListLink to={navItem.slug} active={navItem.name === currentPage}>
                 {navItem.name}
               </ListLink>
             </MobileNavItem>

@@ -9,7 +9,7 @@ const theme = {
     main:
       "conic-gradient(from 225deg at -100px -100px, " +
       "#20b2aa, #135da5, #0d0895, #4b0082, #4b0082, #0d0895, #135da5, #20b2aa)",
-    highlight: 
+    highlight:
       "conic-gradient(at 0% 100%, #b78cf7, #ff7c94, #ffcf0d, #ff7c94, #b78cf7)",
   },
 }

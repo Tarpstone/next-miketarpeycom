@@ -21,7 +21,10 @@ const GradientText = styled.h1`
   background: ${props => props.theme.gradients.main};
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  ${breakpoints("padding", "", [{ 0: "10px 25px 5px 25px" }, { 800: "20px 25px" }])}
+  ${breakpoints("padding", "", [
+    { 0: "10px 25px 5px 25px" },
+    { 800: "20px 25px" },
+  ])}
   ${breakpoints("justify-self", "", [{ 0: "center" }, { 800: "left" }])}
 `
 
