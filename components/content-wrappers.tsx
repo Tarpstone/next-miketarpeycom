@@ -3,8 +3,8 @@ import styled from "styled-components"
 import { gridBreakpoints } from "../utils/breakpoints"
 
 interface ContentWrapperProps {
-  className: string
-  children?: React.ReactNode
+  className?: string
+  children: React.ReactNode
   wrapperGridColumns?: Array<string>
 }
 
