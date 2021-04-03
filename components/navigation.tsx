@@ -4,18 +4,19 @@ import styled from "styled-components"
 import { breakpoints } from "../utils/breakpoints"
 
 const StyledListLink = styled.a`
-  background: ${props => props.theme.gradients.main};
+  background: ${props => props.active ? props.theme.gradients.highlight : props.theme.gradients.main};
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 `
 
 const ListLink = props => (
   <Link href={props.to} passHref>
-    <StyledListLink>{props.children}</StyledListLink>
+    <StyledListLink active={props.active}>{props.children}</StyledListLink>
   </Link>
 )
 
 const TopRightNav = styled.div`
+  ${breakpoints("place-self", "", [{ 0: "center" }, { 800: "center end" }])}
   display: flex;
 `
 
@@ -36,50 +37,24 @@ const DesktopNavItem = styled.li`
   margin: 0 0 0 25px;
 `
 
-const DropdownCover = styled.span`
-  background: ${props => props.theme.gradients.main};
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin: 20px 25px;
-`
-
-const DropdownNavList = styled.ul`
-  background-color: #FFFFFF;
-  display: none;
-  position: absolute;
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  transition: all 0.5s ease;
-  margin-top: 1rem;
-  left: 0;
-  margin: 0;
-`
-
 const MobileNav = styled.nav`
-  ${breakpoints("display", "", [{ 0: "inline-block" }, { 800: "none" }])}
-  position: relative;
-  &:hover ${DropdownNavList} {
-    visibility: visible;
-    opacity: 1;
-    display: block;
-  }
-  &:focus ${DropdownNavList} {
-    visibility: visible;
-    opacity: 1;
-    display: block;
-  }
+  ${breakpoints("display", "", [{ 0: "block" }, { 800: "none" }])}
 `
 
-const DropdownNavItem = styled.li`
-  clear: both;
-  width: 100%;
-  background: ${props => props.theme.gradients.main};
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+const MobileNavList = styled.ul`
+  display: flex;
+  flex-direction: row;
+  padding: 5px 25px;
 `
 
-const Navigation = () => {
+const MobileNavItem = styled.li`
+  font-weight: 700;
+  display: flex;
+  flex-direction: columns;
+  margin: 0px 5px;
+`
+
+const Navigation = ({ currentPage }) => {
   const navMetadata = [
     { name: "home", slug: "/" },
     { name: "about", slug: "/about" },
@@ -94,22 +69,21 @@ const Navigation = () => {
         <DesktopNavList>
           {navMetadata.map(navItem => (
             <DesktopNavItem key={navItem.slug}>
-              <ListLink to={navItem.slug}>{navItem.name}</ListLink>
+              <ListLink to={navItem.slug} active={(navItem.name === currentPage)}>{navItem.name}</ListLink>
             </DesktopNavItem>
           ))}
         </DesktopNavList>
       </DesktopNav>
       <MobileNav>
-        <DropdownCover>
-          test navigation
-        </DropdownCover>
-        <DropdownNavList>
+        <MobileNavList>
           {navMetadata.map(navItem => (
-              <DropdownNavItem key={navItem.slug}>
-                <ListLink to={navItem.slug}>{navItem.name}</ListLink>
-              </DropdownNavItem>
-            ))}
-        </DropdownNavList>
+            <MobileNavItem key={navItem.slug}>
+              <ListLink to={navItem.slug} active={(navItem.name === currentPage)}>
+                {navItem.name}
+              </ListLink>
+            </MobileNavItem>
+          ))}
+        </MobileNavList>
       </MobileNav>
     </TopRightNav>
   )

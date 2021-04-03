@@ -11,6 +11,7 @@ export default function Home() {
       description="Portal to the amazing things that Mike Tarpey's friends are creating."
       url="https://miketarpey.com/friends"
       h1text="friends"
+      currentPage="friends"
     >
       <IndexCardGrid>
         <NavCard

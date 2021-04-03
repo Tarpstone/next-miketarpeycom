@@ -8,6 +8,7 @@ interface LayoutProps {
   url?: string
   urlImage?: string
   h1text: string
+  currentPage: string
   children: React.ReactNode
 }
 
@@ -17,6 +18,7 @@ const NewLayout = ({
   url,
   urlImage,
   h1text,
+  currentPage,
   children,
 }: LayoutProps) => (
   <React.Fragment>
@@ -26,7 +28,7 @@ const NewLayout = ({
       url={url}
       urlImage={urlImage}
     />
-    <NewHeader h1text={h1text} />
+    <NewHeader h1text={h1text} currentPage={currentPage} />
     <main>{children}</main>
   </React.Fragment>
 )

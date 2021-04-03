@@ -7,6 +7,7 @@ export default function Page() {
       titleTwo=" - 404 error"
       description="404 error page for Mike Tarpey's website."
       h1text="404 error!"
+      currentPage="404"
     >
       <h2>There's nothing here.</h2>
     </NewLayout>
