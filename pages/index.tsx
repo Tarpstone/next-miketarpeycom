@@ -54,7 +54,7 @@ export default function Home() {
           internal={false}
           label="apps"
           imagesrc="/images/raw/tarpeydevog.png"
-          imagealt="Screenshot of some JavaScript code."
+          imagealt="A Plotly-based boxplot visualization using scores from a recent fantasy football season of Mildred League."
         >
           <p>
             My app sandbox. Game backlog, March Madness, stats for Mildred

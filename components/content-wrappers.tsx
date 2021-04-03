@@ -68,3 +68,18 @@ export const FlexProjectsSection = styled(UnstyledProjectsSection)`
   justify-content: space-evenly;
   align-items: flex-start;
 `
+
+const UnstyledMiniGrid = ({
+  className,
+  children,
+}: ContentWrapperProps) => (
+  <div className={className}>
+    {children}
+  </div>
+)
+
+export const MiniGrid = styled(UnstyledMiniGrid)`
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-gap: 0px 15px;
+`

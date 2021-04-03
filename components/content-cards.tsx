@@ -141,7 +141,7 @@ export const MeCard = ({ imagesrc, imagealt }: CardProps) => {
             <b>Mike Tarpey</b>
           </li>
           <li>
-            <a href="mailto:mike@tarpey.dev">📧 mike@tarpey.dev</a>
+            📧 <a href="mailto:mike@tarpey.dev">mike@tarpey.dev</a>
           </li>
         </MarginList>
       </ContactDiv>
@@ -164,16 +164,18 @@ export const MeCard = ({ imagesrc, imagealt }: CardProps) => {
 }
 
 // https://stackoverflow.com/questions/6507014/how-to-space-the-children-of-a-div-with-css
+// https://css-tricks.com/almanac/properties/w/width/
 const ProjectGlassDiv = styled.section`
+  display: flex;
+  min-height: min-content;
+  width: 400px;
   padding: 20px;
   ${breakpoints("margin", "", [
     { 0: "0 25px 25px 0" },
     { 800: "0 25px 25px 0" },
   ])}
   flex-grow: 1;
-  display: flex;
   flex-direction: column;
-  height: auto;
   background: ${props => props.theme.glass.projects};
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(10px);
