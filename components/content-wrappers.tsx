@@ -59,11 +59,9 @@ const UnstyledResumeSection = ({
 }: ContentWrapperProps) => (
   <section className={className}>
     <MeCard
-          imagesrc="/images/raw/mike-tarpey-headshot-20200427.jpg"
-          imagealt="Recent headshot of Mike Tarpey."
-        />
-    <Resumeh2>resume</Resumeh2>
-    {children}
+      imagesrc="/images/raw/mike-tarpey-headshot-20200427.jpg"
+      imagealt="Recent headshot of Mike Tarpey."
+    />
   </section>
 )
 
@@ -77,16 +75,17 @@ export const FlexResumeSection = styled(UnstyledResumeSection)`
 
 const Projectsh2 = styled.h2`
   width: 100%;
-  background: ${props => props.theme.glass.projects};
+  color: black;
+  background: ${props => props.theme.glass.inverted};
   &:hover {
-    background: ${props => props.theme.glass.projectsHover};
+    background: ${props => props.theme.glass.invertedHover};
   }
   transition: 0.3s;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid ${props => props.theme.glass.invertedBorder};
   margin: 0 25px 25px 0;
   padding: 10px 20px;
 `
@@ -97,7 +96,6 @@ const UnstyledProjectsSection = ({
   children,
 }: ContentWrapperProps) => (
   <section className={className}>
-    <Projectsh2>resume</Projectsh2>
     <Projectsh2>{Sectionh2}</Projectsh2>
     {children}
   </section>

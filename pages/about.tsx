@@ -19,12 +19,7 @@ export default function Home() {
       currentPage="about"
     >
       <AboutCardGrid>
-        <FlexResumeSection>
-          <ResumeCard>
-            <h4>Associate Actuary</h4>
-            <h5>Genworth Financial, 2018 - present</h5>
-          </ResumeCard>
-        </FlexResumeSection>
+        <FlexResumeSection></FlexResumeSection>
         <FlexProjectsSection Sectionh2="projects">
           <ProjectCard
             internal={true}
