@@ -15,6 +15,7 @@ const GriddedIndexSection = styled.section`
   display: grid;
   grid-gap: 25px;
   grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+  margin: 0 0 25px 0;
 `
 
 export const IndexCardGrid = ({ children }: ContentWrapperProps) => (
