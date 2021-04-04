@@ -19,6 +19,9 @@ const theme = {
     projects: "rgba(255, 124, 148, 0.25)",
     projectsHover: "rgba(255, 124, 148, 0.35)",
     projectsBorder: "rgba(255, 124, 148, 0.18)",
+    resume: "rgba(183, 140, 247, 0.25)",
+    resumeHover: "rgba(183, 140, 247, 0.35)",
+    resumeBorder: "rgba(183, 140, 247, 0.18)",
   },
 }
 

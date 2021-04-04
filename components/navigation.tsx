@@ -26,7 +26,10 @@ const SiteNav = styled.nav`
 const SiteNavList = styled.ul`
   display: flex;
   flex-direction: row;
-  ${breakpoints("padding", "", [{ 0: "5px 25px" }, { 900: "20px 25px 20px 0" }])}
+  ${breakpoints("padding", "", [
+    { 0: "5px 25px" },
+    { 900: "20px 25px 20px 0" },
+  ])}
 `
 
 const SiteNavItem = styled.li`

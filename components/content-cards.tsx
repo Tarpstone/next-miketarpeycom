@@ -7,8 +7,8 @@ interface CardProps {
   internal?: boolean
   label?: string
   children?: React.ReactNode
-  imagesrc: string
-  imagealt: string
+  imagesrc?: string
+  imagealt?: string
   gridrowcss?: string
 }
 
@@ -83,7 +83,8 @@ const MeGlassDiv = styled.section`
   place-self: start;
   ${breakpoints("margin", "", [{ 0: "0 25px 0 0" }, { 900: "0" }])}
   padding: 20px;
-  min-height: ${props => props.minHeight || "40vh"};
+  min-height: min-content;
+  max-width: inherit;
   background: ${props => props.theme.glass.basic};
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(10px);
@@ -168,7 +169,6 @@ export const MeCard = ({ imagesrc, imagealt }: CardProps) => {
 const ProjectGlassDiv = styled.section`
   display: flex;
   min-height: min-content;
-  width: 400px;
   padding: 20px;
   ${breakpoints("margin", "", [
     { 0: "0 25px 25px 0" },
@@ -176,6 +176,7 @@ const ProjectGlassDiv = styled.section`
   ])}
   flex-grow: 1;
   flex-direction: column;
+  flex-basis: 400px;
   background: ${props => props.theme.glass.projects};
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(10px);
@@ -214,5 +215,45 @@ export const ProjectCard = ({
       <Cardh2>{label}</Cardh2>
       {children}
     </ProjectGlassDiv>
+  )
+}
+
+const ResumeGlassDiv = styled.section`
+  display: flex;
+  min-height: min-content;
+  padding: 20px;
+  ${breakpoints("margin", "", [
+    { 0: "0 25px 0 0" },
+    { 900: "0 0 25px 0" },
+  ])}
+  flex-grow: 1;
+  flex-direction: column;
+  flex-basis: 400px;
+  background: ${props => props.theme.glass.resume};
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid ${props => props.theme.glass.resumeBorder};
+  transition: 0.3s;
+  & > * {
+    margin: 0 0 10px 0;
+  }
+  & > *:last-child {
+    margin: 0 0 0 0;
+  }
+  &:hover {
+    background: ${props => props.theme.glass.resumeHover};
+  }
+`
+
+export const ResumeCard = ({
+  children,
+  gridrowcss,
+}: CardProps) => {
+  return (
+    <ResumeGlassDiv minHeight="400px" gridTemplateRows={gridrowcss}>
+      {children}
+    </ResumeGlassDiv>
   )
 }

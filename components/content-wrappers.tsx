@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import { gridBreakpoints } from "../utils/breakpoints"
+import { MeCard } from "../components/content-cards"
+import { breakpoints, gridBreakpoints } from "../utils/breakpoints"
 
 interface ContentWrapperProps {
   Sectionh2?: string
@@ -34,7 +35,47 @@ export const AboutCardGrid = ({ children }: ContentWrapperProps) => (
   <GriddedAboutSection>{children}</GriddedAboutSection>
 )
 
-const Styledh2 = styled.h2`
+const Resumeh2 = styled.h2`
+  background: ${props => props.theme.glass.resume};
+  &:hover {
+    background: ${props => props.theme.glass.resumeHover};
+  }
+  transition: 0.3s;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  ${breakpoints("margin", "", [
+    { 0: "25px 25px 25px 0" },
+    { 900: "25px 0 25px 0" },
+  ])}
+  padding: 10px 20px;
+`
+
+const UnstyledResumeSection = ({
+  className,
+  children,
+}: ContentWrapperProps) => (
+  <section className={className}>
+    <MeCard
+          imagesrc="/images/raw/mike-tarpey-headshot-20200427.jpg"
+          imagealt="Recent headshot of Mike Tarpey."
+        />
+    <Resumeh2>resume</Resumeh2>
+    {children}
+  </section>
+)
+
+export const FlexResumeSection = styled(UnstyledResumeSection)`
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+`
+
+const Projectsh2 = styled.h2`
   width: 100%;
   background: ${props => props.theme.glass.projects};
   &:hover {
@@ -56,7 +97,7 @@ const UnstyledProjectsSection = ({
   children,
 }: ContentWrapperProps) => (
   <section className={className}>
-    <Styledh2>{Sectionh2}</Styledh2>
+    <Projectsh2>{Sectionh2}</Projectsh2>
     {children}
   </section>
 )

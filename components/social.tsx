@@ -15,10 +15,7 @@ const StyledListLink = styled.a`
 
 const ListLink = props => (
   <Link href={props.to} passHref>
-    <StyledListLink
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+    <StyledListLink target="_blank" rel="noopener noreferrer">
       {props.children}
     </StyledListLink>
   </Link>

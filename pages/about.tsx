@@ -1,7 +1,8 @@
 import React from "react"
 import NewLayout from "../components/layout"
-import { MeCard, ProjectCard } from "../components/content-cards"
+import { ResumeCard, ProjectCard } from "../components/content-cards"
 import {
+  FlexResumeSection,
   FlexProjectsSection,
   AboutCardGrid,
   MiniGrid,
@@ -18,10 +19,12 @@ export default function Home() {
       currentPage="about"
     >
       <AboutCardGrid>
-        <MeCard
-          imagesrc="/images/raw/mike-tarpey-headshot-20200427.jpg"
-          imagealt="Recent headshot of Mike Tarpey."
-        />
+        <FlexResumeSection>
+          <ResumeCard>
+            <h4>Associate Actuary</h4>
+            <h5>Genworth Financial, 2018 - present</h5>
+          </ResumeCard>
+        </FlexResumeSection>
         <FlexProjectsSection Sectionh2="projects">
           <ProjectCard
             internal={true}
