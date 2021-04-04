@@ -97,6 +97,7 @@ const UnstyledProjectsSection = ({
   children,
 }: ContentWrapperProps) => (
   <section className={className}>
+    <Projectsh2>resume</Projectsh2>
     <Projectsh2>{Sectionh2}</Projectsh2>
     {children}
   </section>
