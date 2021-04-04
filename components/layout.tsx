@@ -1,6 +1,7 @@
 import React from "react"
 import SEO from "./seo"
 import NewHeader from "./header"
+import NewFooter from "./footer"
 
 interface LayoutProps {
   titleTwo?: string

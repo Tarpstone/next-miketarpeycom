@@ -26,7 +26,7 @@ const GriddedAboutSection = styled.section`
   grid-gap: 25px;
   ${gridBreakpoints("grid-template-columns", [
     { 0: "1fr" },
-    { 800: "400px 1fr" },
+    { 900: "400px 1fr" },
   ])}
 `
 
@@ -69,13 +69,8 @@ export const FlexProjectsSection = styled(UnstyledProjectsSection)`
   align-items: flex-start;
 `
 
-const UnstyledMiniGrid = ({
-  className,
-  children,
-}: ContentWrapperProps) => (
-  <div className={className}>
-    {children}
-  </div>
+const UnstyledMiniGrid = ({ className, children }: ContentWrapperProps) => (
+  <div className={className}>{children}</div>
 )
 
 export const MiniGrid = styled(UnstyledMiniGrid)`

@@ -18,43 +18,22 @@ const ListLink = props => (
   </Link>
 )
 
-const TopRightNav = styled.div`
-  ${breakpoints("place-self", "", [{ 0: "center" }, { 800: "center end" }])}
+const SiteNav = styled.nav`
+  ${breakpoints("place-self", "", [{ 0: "center" }, { 900: "center end" }])}
   display: flex;
 `
 
-const DesktopNav = styled.nav`
-  ${breakpoints("display", "", [{ 0: "none" }, { 800: "block" }])}
-`
-
-const DesktopNavList = styled.ul`
+const SiteNavList = styled.ul`
   display: flex;
   flex-direction: row;
-  padding: 20px 25px;
+  ${breakpoints("padding", "", [{ 0: "5px 25px" }, { 900: "20px 25px 20px 0" }])}
 `
 
-const DesktopNavItem = styled.li`
+const SiteNavItem = styled.li`
   font-weight: 700;
   display: flex;
   flex-direction: columns;
-  margin: 0 0 0 25px;
-`
-
-const MobileNav = styled.nav`
-  ${breakpoints("display", "", [{ 0: "block" }, { 800: "none" }])}
-`
-
-const MobileNavList = styled.ul`
-  display: flex;
-  flex-direction: row;
-  padding: 5px 25px;
-`
-
-const MobileNavItem = styled.li`
-  font-weight: 700;
-  display: flex;
-  flex-direction: columns;
-  margin: 0px 5px;
+  ${breakpoints("margin", "", [{ 0: "0px 5px" }, { 900: "0 0 0 25px" }])}
 `
 
 const Navigation = ({ currentPage }) => {
@@ -67,30 +46,17 @@ const Navigation = ({ currentPage }) => {
   ]
 
   return (
-    <TopRightNav>
-      <DesktopNav>
-        <DesktopNavList>
-          {navMetadata.map(navItem => (
-            <DesktopNavItem key={navItem.slug}>
-              <ListLink to={navItem.slug} active={navItem.name === currentPage}>
-                {navItem.name}
-              </ListLink>
-            </DesktopNavItem>
-          ))}
-        </DesktopNavList>
-      </DesktopNav>
-      <MobileNav>
-        <MobileNavList>
-          {navMetadata.map(navItem => (
-            <MobileNavItem key={navItem.slug}>
-              <ListLink to={navItem.slug} active={navItem.name === currentPage}>
-                {navItem.name}
-              </ListLink>
-            </MobileNavItem>
-          ))}
-        </MobileNavList>
-      </MobileNav>
-    </TopRightNav>
+    <SiteNav>
+      <SiteNavList>
+        {navMetadata.map(navItem => (
+          <SiteNavItem key={navItem.slug}>
+            <ListLink to={navItem.slug} active={navItem.name === currentPage}>
+              {navItem.name}
+            </ListLink>
+          </SiteNavItem>
+        ))}
+      </SiteNavList>
+    </SiteNav>
   )
 }
 

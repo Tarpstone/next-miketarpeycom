@@ -81,7 +81,7 @@ export const NavCard = ({
 
 const MeGlassDiv = styled.section`
   place-self: start;
-  ${breakpoints("margin", "", [{ 0: "0 25px 0 0" }, { 800: "0" }])}
+  ${breakpoints("margin", "", [{ 0: "0 25px 0 0" }, { 900: "0" }])}
   padding: 20px;
   min-height: ${props => props.minHeight || "40vh"};
   background: ${props => props.theme.glass.basic};
@@ -172,7 +172,7 @@ const ProjectGlassDiv = styled.section`
   padding: 20px;
   ${breakpoints("margin", "", [
     { 0: "0 25px 25px 0" },
-    { 800: "0 25px 25px 0" },
+    { 900: "0 25px 25px 0" },
   ])}
   flex-grow: 1;
   flex-direction: column;

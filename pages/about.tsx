@@ -4,7 +4,7 @@ import { MeCard, ProjectCard } from "../components/content-cards"
 import {
   FlexProjectsSection,
   AboutCardGrid,
-  MiniGrid
+  MiniGrid,
 } from "../components/content-wrappers"
 import { ExternalButton } from "../components/buttons"
 
@@ -33,7 +33,9 @@ export default function Home() {
               <div>Timeframe:</div>
               <div>2021</div>
               <div>Stack:</div>
-              <div>MongoDB, Python, TypeScript, React with Next.js on Vercel</div>
+              <div>
+                MongoDB, Python, TypeScript, React with Next.js on Vercel
+              </div>
             </MiniGrid>
             <p>
               A mobile-first March Madness 2021 bracket generator using React
@@ -67,7 +69,9 @@ export default function Home() {
               <div>Timeframe:</div>
               <div>2013 - present</div>
               <div>Stack:</div>
-              <div>MongoDB, Python, TypeScript, React with Next.js on Vercel</div>
+              <div>
+                MongoDB, Python, TypeScript, React with Next.js on Vercel
+              </div>
             </MiniGrid>
             <p>
               Home page for a fantasy football league I've managed for 8+ years.
@@ -104,8 +108,8 @@ export default function Home() {
               program. Reduced total monthly runtime by more than 50% and began
               implementing DevOps basics (GitLab version control, formatting /
               linting pipeline). Currently maintaining the program and adding
-              new features on a regular basis, including a Dash-based web dashboard
-              deployed on Kubernetes.
+              new features on a regular basis, including a Dash-based web
+              dashboard deployed on Kubernetes.
             </p>
           </ProjectCard>
           <ProjectCard
@@ -128,7 +132,8 @@ export default function Home() {
               multiple subdivisions and benefits structures. Consulted with key
               stakeholders up to the VP level to minimize medical network
               disruption for employees while achieving millions of dollars in
-              synergies. Assisted with private marketplace platform implementation.
+              synergies. Assisted with private marketplace platform
+              implementation.
             </p>
           </ProjectCard>
         </FlexProjectsSection>
