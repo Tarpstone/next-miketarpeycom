@@ -7,8 +7,8 @@ interface CardProps {
   internal?: boolean
   label?: string
   children?: React.ReactNode
-  imagesrc: string
-  imagealt: string
+  imagesrc?: string
+  imagealt?: string
   gridrowcss?: string
 }
 
@@ -19,15 +19,15 @@ const IndexGlassDiv = styled.section`
   grid-template-rows: ${props => props.gridTemplateRows || "3fr 1fr 2fr 1fr"};
   align-items: stretch;
   min-height: ${props => props.minHeight};
-  background: rgba(255, 255, 255, 0.25);
+  background: ${props => props.theme.glass.basic};
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid ${props => props.theme.glass.basicBorder};
   transition: 0.3s;
   &:hover {
-    background: rgba(255, 255, 255, 0.35);
+    background: ${props => props.theme.glass.basicHover};
   }
 `
 
@@ -66,7 +66,12 @@ export const NavCard = ({
   return (
     <IndexGlassDiv minHeight="400px" gridTemplateRows={gridrowcss}>
       <CoverPicDiv>
-        <CoverNextImage src={imagesrc} alt={imagealt} layout="fill" objectFit="cover" />
+        <CoverNextImage
+          src={imagesrc}
+          alt={imagealt}
+          layout="fill"
+          objectFit="cover"
+        />
       </CoverPicDiv>
       <Cardh2>{label}</Cardh2>
       {children}
@@ -76,17 +81,25 @@ export const NavCard = ({
 
 const MeGlassDiv = styled.section`
   place-self: start;
+  ${breakpoints("margin", "", [{ 0: "0 25px 0 0" }, { 900: "0" }])}
   padding: 20px;
-  min-height: ${props => props.minHeight || "40vh"};
-  background: rgba(255, 255, 255, 0.25);
+  min-height: min-content;
+  max-width: inherit;
+  background: ${props => props.theme.glass.basic};
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid ${props => props.theme.glass.basicBorder};
   transition: 0.3s;
+  & > * {
+    margin: 0 0 10px 0;
+  }
+  & > *:last-child {
+    margin: 0 0 0 0;
+  }
   &:hover {
-    background: rgba(255, 255, 255, 0.35);
+    background: ${props => props.theme.glass.basicHover};
   }
 `
 
@@ -129,7 +142,7 @@ export const MeCard = ({ imagesrc, imagealt }: CardProps) => {
             <b>Mike Tarpey</b>
           </li>
           <li>
-            <a href="mailto:mike@tarpey.dev">📧 mike@tarpey.dev</a>
+            📧 <a href="mailto:mike@tarpey.dev">mike@tarpey.dev</a>
           </li>
         </MarginList>
       </ContactDiv>
@@ -151,29 +164,34 @@ export const MeCard = ({ imagesrc, imagealt }: CardProps) => {
   )
 }
 
+// https://stackoverflow.com/questions/6507014/how-to-space-the-children-of-a-div-with-css
+// https://css-tricks.com/almanac/properties/w/width/
 const ProjectGlassDiv = styled.section`
-  padding: 20px;
-  flex-grow: 1;
-  ${breakpoints("margin", "", [
-    { 0: "25px 0 0 0" },
-    { 800: "0 0 25px 25px" },
-  ])}
-  margin: ;
   display: flex;
+  min-height: min-content;
+  padding: 20px;
+  ${breakpoints("margin", "", [
+    { 0: "0 25px 25px 0" },
+    { 900: "0 25px 25px 0" },
+  ])}
+  flex-grow: 1;
   flex-direction: column;
-  height: auto;
-  grid-gap: 10px;
-  grid-template-rows: ${props => props.gridTemplateRows || "3fr 1fr 2fr 1fr"};
-  align-items: stretch;
-  background: rgba(255, 255, 255, 0.25);
+  flex-basis: 400px;
+  background: ${props => props.theme.glass.projects};
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid ${props => props.theme.glass.projectsBorder};
   transition: 0.3s;
+  & > * {
+    margin: 0 0 10px 0;
+  }
+  & > *:last-child {
+    margin: 0 0 0 0;
+  }
   &:hover {
-    background: rgba(255, 255, 255, 0.35);
+    background: ${props => props.theme.glass.projectsHover};
   }
 `
 
@@ -187,10 +205,49 @@ export const ProjectCard = ({
   return (
     <ProjectGlassDiv minHeight="400px" gridTemplateRows={gridrowcss}>
       <CoverPicDiv>
-        <CoverNextImage src={imagesrc} alt={imagealt} layout="fill" objectFit="cover" />
+        <CoverNextImage
+          src={imagesrc}
+          alt={imagealt}
+          layout="fill"
+          objectFit="cover"
+        />
       </CoverPicDiv>
       <Cardh2>{label}</Cardh2>
       {children}
     </ProjectGlassDiv>
+  )
+}
+
+const ResumeGlassDiv = styled.section`
+  display: flex;
+  min-height: min-content;
+  padding: 20px;
+  ${breakpoints("margin", "", [{ 0: "0 25px 0 0" }, { 900: "0 0 25px 0" }])}
+  flex-grow: 1;
+  flex-direction: column;
+  flex-basis: 400px;
+  background: ${props => props.theme.glass.resume};
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid ${props => props.theme.glass.resumeBorder};
+  transition: 0.3s;
+  & > * {
+    margin: 0 0 10px 0;
+  }
+  & > *:last-child {
+    margin: 0 0 0 0;
+  }
+  &:hover {
+    background: ${props => props.theme.glass.resumeHover};
+  }
+`
+
+export const ResumeCard = ({ children, gridrowcss }: CardProps) => {
+  return (
+    <ResumeGlassDiv minHeight="400px" gridTemplateRows={gridrowcss}>
+      {children}
+    </ResumeGlassDiv>
   )
 }
