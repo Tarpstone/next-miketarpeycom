@@ -47,6 +47,21 @@ export default function Home() {
             width="100%"
           />
         </NavCard>
+        <NavCard
+          internal={false}
+          label="prescott sun"
+          imagesrc="/images/raw/prescott-site.png"
+          imagealt="Screencap of one of Prescott Sun's apps."
+          gridrowcss="5fr 1fr 2fr 1fr"
+        >
+          <h5>Software engineer and tech enthusiast.</h5>
+          <ExternalButton
+            label="view portfolio"
+            url="https://prescottsun-portfolio.netlify.app"
+            kind="light"
+            width="100%"
+          />
+        </NavCard>
       </IndexCardGrid>
     </NewLayout>
   )

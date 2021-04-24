@@ -79,6 +79,19 @@ export const NavCard = ({
   )
 }
 
+export const NoPicNavCard = ({
+  label,
+  children,
+  gridrowcss,
+}: CardProps) => {
+  return (
+    <IndexGlassDiv gridTemplateRows={gridrowcss}>
+      <Cardh2>{label}</Cardh2>
+      {children}
+    </IndexGlassDiv>
+  )
+}
+
 const MeGlassDiv = styled.section`
   place-self: start;
   ${breakpoints("margin", "", [{ 0: "0 25px 0 0" }, { 900: "0" }])}
