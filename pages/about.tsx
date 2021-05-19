@@ -47,12 +47,6 @@ export default function Home() {
               parallel.
             </p>
             <ExternalButton
-              label="try the app (tarpey.dev)"
-              url="https://tarpey.dev/autobracket"
-              kind="light"
-              width="100%"
-            />
-            <ExternalButton
               label="read more (medium.com)"
               url="https://medium.com/analytics-vidhya/march-madness-2021-simulating-a-bracket-part-1-7aa1cad69a65"
               kind="light"
@@ -107,12 +101,6 @@ export default function Home() {
               scenario model that automatically breaks complex ties among teams
               in the league.
             </p>
-            <ExternalButton
-              label="view stats (tarpey.dev)"
-              url="https://timecapsule.tarpey.dev/mildredleague/"
-              kind="light"
-              width="100%"
-            />
           </ProjectCard>
           <ProjectCard
             internal={true}
