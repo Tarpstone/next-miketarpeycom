@@ -3,7 +3,7 @@
   "version": "latest",
   "description": "https://miketarpey.com",
   "scripts": {
-    "dev": "next",
+    "dev": "next dev -p 4000",
     "build": "next build",
     "start": "next start",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
