@@ -23,6 +23,7 @@ My personal website.
 * [Glassmorphism](https://glassmorphism.com)
 * [conic.css](https://www.conic.style)
 * [Aurora UI](https://uxdesign.cc/aurora-ui-new-visual-trend-for-2021-c763a7daa7e2)
+* [Neumorphism.io](https://neumorphism.io)
 * Important SEO/site-checking tools!
   * [Favicon Generator](https://realfavicongenerator.net/)
   * [Facebook Crawler](https://developers.facebook.com/tools/debug)
