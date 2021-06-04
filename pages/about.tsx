@@ -19,12 +19,7 @@ export default function Home() {
       currentPage="about"
     >
       <AboutCardGrid>
-        <FlexResumeSection>
-          <ResumeCard>
-            <h4>Associate Actuary</h4>
-            <h5>Genworth Financial, 2018 - present</h5>
-          </ResumeCard>
-        </FlexResumeSection>
+        <FlexResumeSection></FlexResumeSection>
         <FlexProjectsSection Sectionh2="projects">
           <ProjectCard
             internal={true}
@@ -35,10 +30,12 @@ export default function Home() {
             <MiniGrid>
               <div>Timeframe:</div>
               <div>2021</div>
-              <div>Stack:</div>
+              <div>Frontend:</div>
               <div>
-                MongoDB, Python, TypeScript, React with Next.js on Vercel
+                TypeScript, React with Next.js on Vercel
               </div>
+              <div>Backend:</div>
+              <div>MongoDB, Python on Google Cloud Run</div>
             </MiniGrid>
             <p>
               A mobile-first March Madness 2021 bracket generator using React
@@ -50,42 +47,8 @@ export default function Home() {
               parallel.
             </p>
             <ExternalButton
-              label="try the app (tarpey.dev)"
-              url="https://tarpey.dev/autobracket"
-              kind="light"
-              width="100%"
-            />
-            <ExternalButton
               label="read more (medium.com)"
               url="https://medium.com/analytics-vidhya/march-madness-2021-simulating-a-bracket-part-1-7aa1cad69a65"
-              kind="light"
-              width="100%"
-            />
-          </ProjectCard>
-          <ProjectCard
-            internal={true}
-            label="mildred league"
-            imagesrc="/images/raw/tarpeydevog.png"
-            imagealt="A Plotly-based boxplot visualization using scores from a recent fantasy football season of Mildred League."
-          >
-            <MiniGrid>
-              <div>Timeframe:</div>
-              <div>2013 - present</div>
-              <div>Stack:</div>
-              <div>
-                MongoDB, Python, TypeScript, React with Next.js on Vercel
-              </div>
-            </MiniGrid>
-            <p>
-              Home page for a fantasy football league I've managed for 8+ years.
-              It includes Plotly-based data visualizations to analyze each
-              team’s performance in a fantasy football league, and a playoff
-              scenario model that automatically breaks complex ties among teams
-              in the league.
-            </p>
-            <ExternalButton
-              label="view stats (tarpey.dev)"
-              url="https://timecapsule.tarpey.dev/mildredleague/"
               kind="light"
               width="100%"
             />
@@ -113,6 +76,30 @@ export default function Home() {
               linting pipeline). Currently maintaining the program and adding
               new features on a regular basis, including a Dash-based web
               dashboard deployed on Kubernetes.
+            </p>
+          </ProjectCard>
+          <ProjectCard
+            internal={true}
+            label="mildred league"
+            imagesrc="/images/raw/tarpeydevog.png"
+            imagealt="A Plotly-based boxplot visualization using scores from a recent fantasy football season of Mildred League."
+          >
+            <MiniGrid>
+              <div>Timeframe:</div>
+              <div>2013 - present</div>
+              <div>Frontend:</div>
+              <div>
+                TypeScript, React with Next.js on Vercel
+              </div>
+              <div>Backend:</div>
+              <div>MongoDB, Python on Google Cloud Run</div>
+            </MiniGrid>
+            <p>
+              Home page for a fantasy football league I've managed for 8+ years.
+              It includes Plotly-based data visualizations to analyze each
+              team’s performance in a fantasy football league, and a playoff
+              scenario model that automatically breaks complex ties among teams
+              in the league.
             </p>
           </ProjectCard>
           <ProjectCard

@@ -79,6 +79,19 @@ export const NavCard = ({
   )
 }
 
+export const NoPicNavCard = ({
+  label,
+  children,
+  gridrowcss,
+}: CardProps) => {
+  return (
+    <IndexGlassDiv gridTemplateRows={gridrowcss}>
+      <Cardh2>{label}</Cardh2>
+      {children}
+    </IndexGlassDiv>
+  )
+}
+
 const MeGlassDiv = styled.section`
   place-self: start;
   ${breakpoints("margin", "", [{ 0: "0 25px 0 0" }, { 900: "0" }])}
@@ -222,10 +235,7 @@ const ResumeGlassDiv = styled.section`
   display: flex;
   min-height: min-content;
   padding: 20px;
-  ${breakpoints("margin", "", [
-    { 0: "0 25px 0 0" },
-    { 900: "0 0 25px 0" },
-  ])}
+  ${breakpoints("margin", "", [{ 0: "0 25px 0 0" }, { 900: "0 0 25px 0" }])}
   flex-grow: 1;
   flex-direction: column;
   flex-basis: 400px;
@@ -247,10 +257,7 @@ const ResumeGlassDiv = styled.section`
   }
 `
 
-export const ResumeCard = ({
-  children,
-  gridrowcss,
-}: CardProps) => {
+export const ResumeCard = ({ children, gridrowcss }: CardProps) => {
   return (
     <ResumeGlassDiv minHeight="400px" gridTemplateRows={gridrowcss}>
       {children}

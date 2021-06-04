@@ -21,6 +21,7 @@ My personal website.
 
 ## References
 * [Glassmorphism](https://glassmorphism.com)
+* [Neumorphism.io](https://neumorphism.io)
 * [conic.css](https://www.conic.style)
 * [Aurora UI](https://uxdesign.cc/aurora-ui-new-visual-trend-for-2021-c763a7daa7e2)
 * [Neumorphism.io](https://neumorphism.io)
@@ -31,6 +32,9 @@ My personal website.
   * [LinkedIn Post Inspector](https://www.linkedin.com/post-inspector/)
   * [Google Search Console](https://search.google.com/search-console/about)
   * [Bing Webmaster Tools](https://www.bing.com/webmasters/about)
+  * [Security Headers](https://dev.to/madsstoumann/frontend-security-security-headers-517p)
+  * [Probely](https://securityheaders.com)
+  * [Next Secure Headers](https://github.com/jagaapple/next-secure-headers)
 * [Deploying to Firebase Hosting](https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/deploying-to-firebase/)
 * [Connect a custom domain to Firebase](https://firebase.google.com/docs/hosting/custom-domain)
 * [Configure Firebase Hosting behavior](https://firebase.google.com/docs/hosting/full-config)
