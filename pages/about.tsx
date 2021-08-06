@@ -31,9 +31,7 @@ export default function Home() {
               <div>Timeframe:</div>
               <div>2021</div>
               <div>Frontend:</div>
-              <div>
-                TypeScript, React with Next.js on Vercel
-              </div>
+              <div>TypeScript, React with Next.js on Vercel</div>
               <div>Backend:</div>
               <div>MongoDB, Python on Google Cloud Run</div>
             </MiniGrid>
@@ -88,9 +86,7 @@ export default function Home() {
               <div>Timeframe:</div>
               <div>2013 - present</div>
               <div>Frontend:</div>
-              <div>
-                TypeScript, React with Next.js on Vercel
-              </div>
+              <div>TypeScript, React with Next.js on Vercel</div>
               <div>Backend:</div>
               <div>MongoDB, Python on Google Cloud Run</div>
             </MiniGrid>

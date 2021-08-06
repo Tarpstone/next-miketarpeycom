@@ -79,11 +79,7 @@ export const NavCard = ({
   )
 }
 
-export const NoPicNavCard = ({
-  label,
-  children,
-  gridrowcss,
-}: CardProps) => {
+export const NoPicNavCard = ({ label, children, gridrowcss }: CardProps) => {
   return (
     <IndexGlassDiv gridTemplateRows={gridrowcss}>
       <Cardh2>{label}</Cardh2>
