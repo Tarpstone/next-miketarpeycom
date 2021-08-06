@@ -41,6 +41,7 @@ My personal website.
 * [What is linting and how can it save you time?](https://www.freecodecamp.org/news/what-is-linting-and-how-can-it-save-you-time/)
 * [Declaring multiple licences in a GitHub project](https://softwareengineering.stackexchange.com/questions/304874/declaring-multiple-licences-in-a-github-project)
 * [iconmonstr](https://iconmonstr.com/)
+* https://github.com/vercel/next.js/issues/23637
 
 ## Third-party licenses
 
