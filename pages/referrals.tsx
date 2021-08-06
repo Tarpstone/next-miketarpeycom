@@ -19,9 +19,7 @@ export default function Home() {
           label="DollarShaveClub"
           gridrowcss="1fr 1.5fr 1fr"
         >
-          <h5>
-            Favorite razor since the UConn days.
-          </h5>
+          <h5>Favorite razor since the UConn days.</h5>
           <ExternalButton
             label="visit dollarshaveclub.com"
             url="http://shaved.by/lfiQl"
@@ -60,7 +58,10 @@ export default function Home() {
           label="Binance.US"
           gridrowcss="1fr 1.5fr 1fr"
         >
-          <h5>My favorite crypto exchange, with the lowest fees. (Do your own research before investing!)</h5>
+          <h5>
+            My favorite crypto exchange, with the lowest fees. (Do your own
+            research before investing!)
+          </h5>
           <ExternalButton
             label="visit binance.us"
             url="https://accounts.binance.us/en/register?ref=52573715"
@@ -86,7 +87,10 @@ export default function Home() {
           label="Coinbase Pro"
           gridrowcss="1fr 1.5fr 1fr"
         >
-          <h5>Second favorite crypto exchange. (I recommend Coinbase Pro - lower fees than vanilla Coinbase!)</h5>
+          <h5>
+            Second favorite crypto exchange. (I recommend Coinbase Pro - lower
+            fees than vanilla Coinbase!)
+          </h5>
           <ExternalButton
             label="visit coinbase.com"
             url="https://www.coinbase.com/join/5a6eab9d8bf65d0545be6e9a"
@@ -112,7 +116,10 @@ export default function Home() {
           label="Fundrise"
           gridrowcss="1fr 1.5fr 1fr"
         >
-          <h5>Platform for investing in real estate projects without having to be a mogul.</h5>
+          <h5>
+            Platform for investing in real estate projects without having to be
+            a mogul.
+          </h5>
           <ExternalButton
             label="visit fundrise.com"
             url="https://fundrise.com/r/0o5p5"
@@ -125,7 +132,10 @@ export default function Home() {
           label="Backblaze"
           gridrowcss="1fr 1.5fr 1fr"
         >
-          <h5>Painless backup of your computer's hard drive. Protect your digital life!</h5>
+          <h5>
+            Painless backup of your computer's hard drive. Protect your digital
+            life!
+          </h5>
           <ExternalButton
             label="visit backblaze.com"
             url="https://secure.backblaze.com/r/01bqxp"
@@ -133,11 +143,7 @@ export default function Home() {
             width="100%"
           />
         </NoPicNavCard>
-        <NoPicNavCard
-          internal={false}
-          label="Honey"
-          gridrowcss="1fr 1.5fr 1fr"
-        >
+        <NoPicNavCard internal={false} label="Honey" gridrowcss="1fr 1.5fr 1fr">
           <h5>Save money on every internet shopping trip.</h5>
           <ExternalButton
             label="visit joinhoney.com"

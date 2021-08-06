@@ -24,16 +24,14 @@ export default function Home() {
           <ProjectCard
             internal={true}
             label="autobracket"
-            imagesrc="/images/raw/autobracket.png"
+            imagesrc="/images/tinypngdotcom/autobracket.png"
             imagealt="A portion of a March Madness 2021 bracket from Mike Tarpey's autobracket app."
           >
             <MiniGrid>
               <div>Timeframe:</div>
               <div>2021</div>
               <div>Frontend:</div>
-              <div>
-                TypeScript, React with Next.js on Vercel
-              </div>
+              <div>TypeScript, React with Next.js on Vercel</div>
               <div>Backend:</div>
               <div>MongoDB, Python on Google Cloud Run</div>
             </MiniGrid>
@@ -56,7 +54,7 @@ export default function Home() {
           <ProjectCard
             internal={true}
             label="A/E Pipeline"
-            imagesrc="/images/raw/mike-tarpey-richmond-actuary.jpg"
+            imagesrc="/images/tinypngdotcom/mike-tarpey-richmond-actuary.jpg"
             imagealt="A picture from one of the bridges over the James River, with the Richmond city skyline in the background."
           >
             <MiniGrid>
@@ -81,16 +79,14 @@ export default function Home() {
           <ProjectCard
             internal={true}
             label="mildred league"
-            imagesrc="/images/raw/tarpeydevog.png"
+            imagesrc="/images/tinypngdotcom/tarpeydevog.png"
             imagealt="A Plotly-based boxplot visualization using scores from a recent fantasy football season of Mildred League."
           >
             <MiniGrid>
               <div>Timeframe:</div>
               <div>2013 - present</div>
               <div>Frontend:</div>
-              <div>
-                TypeScript, React with Next.js on Vercel
-              </div>
+              <div>TypeScript, React with Next.js on Vercel</div>
               <div>Backend:</div>
               <div>MongoDB, Python on Google Cloud Run</div>
             </MiniGrid>
@@ -105,7 +101,7 @@ export default function Home() {
           <ProjectCard
             internal={true}
             label="Employee Benefits Harmonization"
-            imagesrc="/images/raw/sunset-downtown-richmond.jpg"
+            imagesrc="/images/tinypngdotcom/sunset-downtown-richmond.jpg"
             imagealt="Sunset picture from the top of a parking garage in downtown Richmond."
           >
             <MiniGrid>

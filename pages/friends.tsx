@@ -17,7 +17,7 @@ export default function Home() {
         <NavCard
           internal={false}
           label="trevor wentt"
-          imagesrc="/images/raw/trevor-wentt-freshness-45.jpg"
+          imagesrc="/images/tinypngdotcom/trevor-wentt-freshness-45.jpg"
           imagealt="Trevor Wentt standing at the corner of a downtown intersection."
           gridrowcss="5fr 1fr 2fr 1fr"
         >
@@ -35,7 +35,7 @@ export default function Home() {
         <NavCard
           internal={false}
           label="constant content"
-          imagesrc="/images/raw/cc-crown-grab.png"
+          imagesrc="/images/tinypngdotcom/cc-crown-grab.png"
           imagealt="A Fall Guys character grabbing the Fall Mountain crown for the win!"
           gridrowcss="5fr 1fr 2fr 1fr"
         >
@@ -50,7 +50,7 @@ export default function Home() {
         <NavCard
           internal={false}
           label="prescott sun"
-          imagesrc="/images/raw/prescott-site.png"
+          imagesrc="/images/tinypngdotcom/prescott-site.png"
           imagealt="Screencap of one of Prescott Sun's apps."
           gridrowcss="5fr 1fr 2fr 1fr"
         >

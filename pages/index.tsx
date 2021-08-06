@@ -11,7 +11,7 @@ export default function Home() {
         <NavCard
           internal={true}
           label="about"
-          imagesrc="/images/raw/mike-tarpey-at-pax.jpg"
+          imagesrc="/images/tinypngdotcom/mike-tarpey-at-pax.jpg"
           imagealt="Mike Tarpey on his way to PAX East 2020 in Boston, Massachusetts."
         >
           <p>Career and project history.</p>
@@ -25,7 +25,7 @@ export default function Home() {
         <NavCard
           internal={true}
           label="timeline"
-          imagesrc="/images/raw/mike-tarpey-childhood-beach.jpg"
+          imagesrc="/images/tinypngdotcom/mike-tarpey-childhood-beach.jpg"
           imagealt="Childhood picture of Mike Tarpey at Daytona Beach."
         >
           <p>A selection of the memories I carry around.</p>
@@ -39,7 +39,7 @@ export default function Home() {
         <NavCard
           internal={true}
           label="friends"
-          imagesrc="/images/raw/dew-uconn-crew.jpg"
+          imagesrc="/images/tinypngdotcom/dew-uconn-crew.jpg"
           imagealt="Mike Tarpey's last photo with his UConn crew before graduating."
         >
           <p>Portal to the amazing things that my friends are creating.</p>
@@ -53,7 +53,7 @@ export default function Home() {
         <NavCard
           internal={false}
           label="apps"
-          imagesrc="/images/raw/tarpeydevog.png"
+          imagesrc="/images/tinypngdotcom/tarpeydevog.png"
           imagealt="A Plotly-based boxplot visualization using scores from a recent fantasy football season of Mildred League."
         >
           <p>
@@ -70,7 +70,7 @@ export default function Home() {
         <NavCard
           internal={false}
           label="blog"
-          imagesrc="/images/raw/cat-blogger-hype.jpg"
+          imagesrc="/images/tinypngdotcom/cat-blogger-hype.jpg"
           imagealt="A cat standing on Mike Tarpey's laptop keyboard."
         >
           <p>Ideas and solutions from my day-to-day.</p>
@@ -84,7 +84,7 @@ export default function Home() {
         <NavCard
           internal={true}
           label="credits"
-          imagesrc="/images/raw/baxter-bravo-stack.jpg"
+          imagesrc="/images/tinypngdotcom/baxter-bravo-stack.jpg"
           imagealt="The dogs Baxter and Bravo hanging out in the backyard, one stacked on top of the other."
         >
           <p>The technologies that currently make this site possible.</p>
